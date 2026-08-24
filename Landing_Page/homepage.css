@@ -2,19 +2,80 @@
     display:flex;
     flex-direction:column;
     height: 290vh;
-    background-color:#8a2be2;
     font-family: "roboto",sans-serif;
     margin:0;
 }
 #box1 {
     background-color:#1F2937;
-    flex:4;
+    flex:3;
     display:flex;
     flex-direction:column
 }
+#box1-header{
+    flex:1;
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    margin:20px 300px 0px 300px;
+}
+#box1-header-logo-text{
+    font-size:30px;
+    font-weight: 600;
+    color:white;
+}
+#box1-header-links{
+    display:flex;
+    width:500px;
+    justify-content:space-around;
+    font-size:21px;
+    font-weight:500;
+    color:grey;
+}
+#box1-main-content{
+    flex:5;
+    margin:0px 300px 50px 300px;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:center;
+}
+#box1-main-content-text{
+    display:flex;
+    flex-direction: column;
+    width:60%;
+    color:white;
+}
+#box1-main-content-text1{
+    font-size: 45px;
+    font-weight: 700;
+    padding:5px;
+}
+#box1-main-content-text2{
+    font-size: 21px;
+    font-weight:400;
+    color:grey;
+}
+#box1-main-content-image{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:45%;
+    background-color: grey;
+    height:215px
+}
+#box1-main-content-button{
+    width:140px;
+    height:40px;
+    background-color:#3b82F6;
+    border-width: 0;
+    border-radius:10px;
+    color:white;
+    font-size:18px;
+    font-weight:600;
+}
 #box2 {
     background-color: #FFFFFF;
-    flex:4;
+    flex:3;
     display:flex;
     flex-direction: column;
     justify-content: center;
@@ -75,31 +136,7 @@
     font-size:25px;
     color:#FFFFFF
 }
-#box1-header{
-    flex:1;
-    display:flex;
-    justify-content: space-between;
-    align-items:center;
-    margin:0px 300px;
-}
-#box1-header-logo-text{
-    font-size:30px;
-    font-weight: 600;
-    color:white;
-}
-#box1-header-links{
-    display:flex;
-    width:500px;
-    justify-content:space-around;
-    font-size:21px;
-    font-weight:500;
-    color:grey;
-}
-#box1-main-content{
-    background-color: lightblue;
-    flex:5;
-    margin:0px 300px;
-}
+
 #box4{
     flex:3;
     background-color: #FFFFFF;
