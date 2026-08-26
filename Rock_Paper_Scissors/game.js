@@ -1,4 +1,4 @@
-function newgame(){
+function newGame(){
     let humanScore=0, computerScore=0;
     console.log("Please Enter Your Choice:")
     while(humanScore<5 && computerScore<5){
@@ -49,7 +49,7 @@ function machineChoice(){
 }
 function nowPlay(){
     console.log("Lets play")
-    newgame()
+    newGame()
     let again=prompt("Do you want to play again(y/n):")
     if(again=='y'){
         nowPlay()
