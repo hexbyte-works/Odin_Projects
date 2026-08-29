@@ -42,7 +42,20 @@ function showMove(hm,cm){
     const compMoveText= document.getElementById('game-move')
     compMoveText.innerText=`Computer's Move: ${cm}`
 }
-
+function reset(){
+    humanScore=0;
+    computerScore=0;
+    document.getElementById('human-score').innerText=`Human Score:`
+    document.getElementById('computer-score').innerText=`Computer Score:`
+    document.getElementById('victor').innerText='Victor:'
+    document.getElementById('human-move').innerText=`Your Move:`
+    document.getElementById('game-move').innerText=`Computer's Move:`
+}
+function checkWin(){
+    if(humanScore==5 || computerScore==5){
+        reset()
+    }
+}
 let humanScore=0
 let computerScore=0
 const rockMove = document.getElementById('rock-button')
@@ -53,14 +66,23 @@ rockMove.addEventListener('click',()=>{
     const compMove = machineChoice()
     showMove('rock',compMove)
     tellVictor('rock',compMove)
+    checkWin()
 })
 paperMove.addEventListener('click',()=>{
     const compMove = machineChoice()
     showMove('paper',compMove)
     tellVictor('paper',compMove)
+    checkWin()
 })
 scissorMove.addEventListener('click',()=>{
     const compMove = machineChoice()
     showMove('scissor',compMove)
     tellVictor('scissor',compMove)
+    checkWin()
 })
+const restart = document.getElementById('restart')
+
+restart.addEventListener('click',()=>{
+    reset()
+})
+
