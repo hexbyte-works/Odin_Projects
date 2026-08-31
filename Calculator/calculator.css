@@ -1,0 +1,31 @@
+.row{
+    display:flex;
+}
+#answer{
+    border: 2px solid black;
+    width:225px;
+    margin:4px;
+    height: 38px;
+    border-radius:8px;
+    font-size:18px;
+    padding:5px;
+}
+.button, .text-button{
+    height:50px;
+    width:50px;
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    margin: 4px;
+    border: 2px solid black;
+    border-radius:8px;
+}
+.button{
+    font-size: 18px;
+}
+.button:hover{
+    background-color: lightgray;
+}
+.text-button:hover{
+    background-color: lightgray;
+}
