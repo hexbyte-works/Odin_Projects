@@ -1,0 +1,14 @@
+P{
+    font-family:"helvetica",'Trebuchet MS','verdana', sans-serif;
+}
+@font-face {
+    font-family:'myFont';
+    src: url("MilkyCream.woff") format('woff'),
+         url("MilkyCream.woff2") format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;    
+}
+div{
+    font-family:"myFont"
+}
