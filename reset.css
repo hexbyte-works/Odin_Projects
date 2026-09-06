@@ -1,14 +1,14 @@
-/* 1. Use a more-intuitive box-sizing model */
+/* 1. Make width and height include padding and borders, making element sizing easier to reason about. */
 *, *::before, *::after {
   box-sizing: border-box;
 }
 
-/* 2. Remove default margin */
+/* 2. Remove the browser's default margin so spacing can be controlled explicitly. */
 *:not(dialog) {
   margin: 0;
 }
 
-/* 3. Enable keyword animations */
+/* 3. Allow CSS animations and transitions to interpolate between keyword-based size values when the user has not requested reduced motion. */
 @media (prefers-reduced-motion: no-preference) {
   html {
     interpolate-size: allow-keywords;
@@ -16,30 +16,28 @@
 }
 
 body {
-  /* 4. Increase line-height */
+  /* 4. Set a more comfortable default line height to improve text readability. */
   line-height: 1.5;
-  /* 5. Improve text rendering */
+/* 5. Use antialiased font rendering on WebKit-based browsers for smoother-looking text. */
   -webkit-font-smoothing: antialiased;
 }
 
-/* 6. Improve media defaults */
-img, picture, video, canvas, svg {
+/* 6. Make media elements block-level and prevent them from overflowing their containers. */img, picture, video, canvas, svg {
   display: block;
   max-width: 100%;
 }
 
-/* 7. Inherit fonts for form controls */
+/* 7. Make form controls use the same font settings as the surrounding page instead of browser-specific defaults. */
 input, button, textarea, select {
   font: inherit;
 }
 
-/* 8. Avoid text overflows */
+/* 8. Allow long words and unbroken strings in text and headings to wrap instead of overflowing their containers. */
 p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
 }
 
-/* 9. Improve line wrapping */
-p {
+/* 9. Improve paragraph and heading wrapping so text breaks more naturally and headings have balanced line lengths. */p {
   text-wrap: pretty;
 }
 h1, h2, h3, h4, h5, h6 {
@@ -47,8 +45,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*
-  10. Create a root stacking context
-*/
+/* 10. Create an independent stacking context for common application root elements so their z-index behavior stays isolated from the rest of the document. */*/
 #root, #__next {
   isolation: isolate;
 }
