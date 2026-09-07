@@ -1,0 +1,142 @@
+/* 1. Background color */
+.box {
+    background-color: green;
+    /* Sets the background color */
+}
+
+/* 2. Background image */
+.box {
+    background-image: url("image.jpg");
+    /* Adds an image behind the content */
+}
+
+/* 3. Repeat */
+.box {
+    background-repeat: no-repeat;
+    /* repeat    = both directions (default)
+       repeat-x  = horizontal
+       repeat-y  = vertical
+       no-repeat = once */
+}
+
+/* 4. Position */
+.box {
+    background-position: center;
+    /* Common: left, center, right, top, bottom
+       Example: center top
+       Exact: 20px 50px */
+}
+
+/* 5. Size */
+.box {
+    background-size: cover;
+    /* cover   = fills box, may crop image
+       contain = shows whole image, may leave space
+       auto    = natural size
+       100%    = scale to 100% */
+}
+
+/* 6. Attachment */
+.box {
+    background-attachment: fixed;
+    /* scroll = normal (default)
+       fixed  = stays fixed while page scrolls
+       local  = scrolls with element contents */
+}
+
+/* 7. Origin */
+.box {
+    background-origin: padding-box;
+    /* border-box  = positioning includes border
+       padding-box = positioning starts at padding
+       content-box = positioning starts at content */
+}
+
+/* 8. Clip */
+.box {
+    background-clip: padding-box;
+    /* Controls where background is painted
+       border-box / padding-box / content-box
+       text = clip background to text */
+}
+
+/* 9. Blend */
+.box {
+    background-blend-mode: multiply;
+    /* Controls how background layers blend */
+}
+
+/* 10. Shorthand */
+.box {
+    background: red url("image.jpg")
+                no-repeat center / cover;
+    /* color + image + repeat + position / size */
+}
+
+/* 11. Simple shorthand examples */
+.box { background: green; }
+.box { background: url("image.jpg") no-repeat; }
+.box { background: url("image.jpg") center / cover; }
+
+/* 12. Gradient */
+.box {
+    background: linear-gradient(to right, red, blue);
+    /* Gradients work as background images */
+}
+
+.box {
+    background: radial-gradient(circle, white, blue);
+}
+
+/* 13. Image overlay */
+.box {
+    background:
+        linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)),
+        url("image.jpg") center / cover;
+    /* Gradient comes first, so it sits on top */
+}
+
+/* 14. Multiple backgrounds */
+.box {
+    background-image: url("top.png"), url("bottom.jpg");
+    /* First image = top layer
+       Second image = lower layer */
+}
+
+/* 15. Multiple backgrounds with shorthand */
+.box {
+    background:
+        url("icon.png") center / 100px no-repeat,
+        url("photo.jpg") center / cover no-repeat;
+}
+
+/* 16. Global values */
+.box { background: inherit; }      /* Get parent's value */
+.box { background: initial; }      /* Reset to initial value */
+.box { background: unset; }        /* Inherit or initial */
+.box { background: revert; }       /* Undo current cascade rule */
+.box { background: revert-layer; } /* Undo current cascade layer */
+
+/* =========================================
+   MOST IMPORTANT TO REMEMBER
+   =========================================
+
+   background-color  → color
+   background-image  → image / gradient
+   background-repeat → repetition
+   background-position → location
+   background-size   → size
+   background-attachment → scrolling behavior
+   background-origin → positioning area
+   background-clip   → painting area
+   background        → shorthand
+
+   VERY COMMON:
+
+   background: url("image.jpg") center / cover no-repeat;
+
+   Remember:
+   position / size
+        ↓       ↓
+      center / cover
+*/
