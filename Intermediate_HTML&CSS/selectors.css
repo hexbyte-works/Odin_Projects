@@ -30,3 +30,12 @@ main > div > div {
   content: "This should show before the other content. ";
   background-color: yellow;
 }
+.parent> div:nth-child(2) {/* “Select the second child of .parent.” */
+  color: violet;
+}
+#google-link:hover{ 
+  color:red;
+}
+#google:visited{
+  color:darkred;
+}
