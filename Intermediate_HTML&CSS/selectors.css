@@ -26,16 +26,20 @@ main > div > div {
 .group1:first-child{/* “Select an element with class .parent if it is the first child of its parent.”*/
   font-size: 25px;
 }
+/* ::before creates a pseudo-element that appears before the element's actual content. */
 .box::before {
   content: "This should show before the other content. ";
   background-color: yellow;
 }
+/* Selects the second child <div> inside an element with class .parent. */
 .parent> div:nth-child(2) {/* “Select the second child of .parent.” */
   color: violet;
 }
+/* :hover applies these styles when the mouse pointer is placed over the element with id="google-link". */
 #google-link:hover{ 
   color:red;
 }
+/* :visited applies styles to the #google link after the user has visited its destination. */
 #google:visited{
   color:darkred;
 }
