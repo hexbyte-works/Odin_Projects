@@ -1,7 +1,8 @@
-/* selecting by descendant combinator, it selects all div nested within it*/
+/* selecting by descendant combinator, it selects all div directly nested within it*/
 main div {
   /* Our cool CSS */
 }
+/*Selecting by child combinator*/
 /* The divs with the class "child" will get selected by this */
 main > div {
   /* Our cool CSS */
@@ -37,9 +38,18 @@ main > div > div {
 }
 /* :hover applies these styles when the mouse pointer is placed over the element with id="google-link". */
 #google-link:hover{ 
+  color:violet;
+}
+#google-link:link{ 
   color:red;
 }
 /* :visited applies styles to the #google link after the user has visited its destination. */
 #google:visited{
   color:darkred;
+}
+.myList:nth-child(5){/*select 5th element of the list */
+color:blue;
+}
+.myList:nth-child(2n+2) {
+color:pink;
 }
