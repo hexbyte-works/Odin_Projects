@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 30px;
+    height: 12000px;
+}
+
+.box,
+.parent {
+    padding: 20px;
+    margin: 20px 0;
+    border: 2px solid black;
+}
+
+/* STATIC
+   Default position.
+   Element stays in normal flow.
+*/
+.static {
+    position: static;
+}
+
+
+/* RELATIVE
+   Stays in normal flow.
+   Can be moved from its original position.
+*/
+.relative {
+    position: relative;
+    left: 30px;
+}
+
+
+/* ABSOLUTE
+   Removed from normal flow.
+   Positioned relative to the nearest positioned parent.
+*/
+.parent {
+    position: relative;
+    height: 100px;
+}
+
+.absolute {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: lightblue;
+}
+
+/* STICKY
+   Acts like normal/relative positioning
+   until you scroll to it.
+   Then it sticks to the top.
+*/
+.sticky {
+    position: sticky;
+    top: 0;
+    background-color: lightgreen;
+}
+
+/* FIXED
+   Removed from normal flow.
+   Stays in the same place on the screen
+   even when you scroll.
+*/
+.fixed {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: orange;
+}
