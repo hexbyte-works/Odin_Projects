@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSS Functions</title>
+
+    <style>
+        body {
+            background-color: grey;
+            font-family: Arial, sans-serif;
+        }
+
+        /* clamp() */
+        #hello {
+            height: 100px;
+            width: clamp(100px, 10vw, 250px);
+            /* Minimum: 100px
+               Preferred: 10vw that is 10% the view area width
+               Maximum: 250px */
+
+            background: linear-gradient(90deg, blue, red);
+            color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        /* min() */
+        #min-example {
+            width: min(80%, 500px);
+            /* Uses whichever is smaller:
+               80% of the parent OR 500px */
+
+            height: 100px;
+            background: green;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        /* max() */
+        #max-example {
+            width: max(300px, 30%);
+            /* Uses whichever is larger:
+               300px OR 30% of the parent */
+
+            height: 100px;
+            background: purple;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        /* calc() */
+        #calc-example {
+            width: calc(100% - 100px);
+            /* Performs a calculation:
+               100% - 100px */
+
+            height: 100px;
+            background: orange;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        /* rgb() */
+        #rgb-example {
+            width: 300px;
+            height: 100px;
+
+            background-color: rgb(30, 144, 255);
+            /* rgb(red, green, blue) */
+
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        /* rgba() */
+        #rgba-example {
+            width: 300px;
+            height: 100px;
+
+            background-color: rgba(255, 0, 0, 0.5);
+            /* rgba(red, green, blue, alpha)
+               Alpha controls transparency */
+
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        /* hsl() */
+        #hsl-example {
+            width: 300px;
+            height: 100px;
+
+            background-color: hsl(120, 70%, 40%);
+            /* hsl(hue, saturation, lightness) */
+
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        /* linear-gradient() */
+        #linear-gradient-example {
+            width: 300px;
+            height: 100px;
+
+            background: linear-gradient(135deg, purple, pink);
+
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        /* radial-gradient() */
+        #radial-gradient-example {
+            width: 300px;
+            height: 100px;
+
+            background: radial-gradient(
+                circle,
+                yellow,
+                orange,
+                red
+            );
+
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        /* url() */
+        #url-example {
+            width: 300px;
+            height: 100px;
+
+            background-image: url("https://picsum.photos/300/100");
+            /* Loads an image using a URL */
+
+            background-size: cover;
+            color: white;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="hello">clamp()</div>
+
+    <div id="min-example">min()</div>
+
+    <div id="max-example">max()</div>
+
+    <div id="calc-example">calc()</div>
+
+    <div id="rgb-example">rgb()</div>
+
+    <div id="rgba-example">rgba()</div>
+
+    <div id="hsl-example">hsl()</div>
+
+    <div id="linear-gradient-example">
+        linear-gradient()
+    </div>
+
+    <div id="radial-gradient-example">
+        radial-gradient()
+    </div>
+
+    <div id="url-example">
+        url()
+    </div>
+
+</body>
+</html>
