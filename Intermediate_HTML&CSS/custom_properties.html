@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Custom Properties</title>
+
+    <style>
+        /* :root is the highest-level scope.
+           Variables here can be inherited by the whole page. */
+        :root {
+            --global-color: blue;
+            --root-only: purple;
+            --page-size: 20px;
+        }
+        /* Variables defined on body are inherited
+           by its descendants. */
+        body {
+            --body-color: green;
+            --body-only: orange;
+
+            font-size: var(--page-size);
+        }
+        .model {
+            --color-text: red;
+            --modal-border: 1px solid black;
+            --modal-font-size: calc(2rem + 5vw);
+
+            color: var(--color-text);
+            border: var(--modal-border);
+            font-size: var(--modal-font-size);
+
+            /* --body-color is inherited from body */
+            background-color: var(--body-color);
+        }
+
+        /* This element can inherit --color-text
+           if it is placed inside .model. */
+        .child {
+            color: var(--color-text);
+
+            /* --global-color comes from :root */
+            border: 3px solid var(--global-color);
+        }
+        .fallback {
+            --color-text: white;
+
+            /* --undeclared-property doesn't exist,
+               so black is used as the fallback. */
+            background-color: var(
+                --undeclared-property,
+                black
+            );
+
+            /* --undeclared-again doesn't exist,
+               so the nested fallback is checked.
+               
+               --color-text exists and is white,
+               so white is used. */
+            color: var(
+                --undeclared-again,
+                var(--color-text, yellow)
+            );
+        }
+
+        .scope-demo {
+            border: 2px dashed var(--global-color);
+            padding: 10px;
+        }
+
+        .scope-demo .inner {
+            /* These variables are inherited:
+               --body-color comes from body
+               --global-color comes from :root */
+            color: var(--body-color);
+            border: 2px solid var(--global-color);
+
+            padding: 10px;
+        }
+
+        .scope-demo .local {
+            /* This variable exists only in this
+               element's scope and its descendants. */
+            --local-color: crimson;
+
+            color: var(--local-color);
+        }
+
+        .scope-demo .local .inside-local {
+            /* --local-color is inherited from
+               the parent .local element. */
+            color: var(--local-color);
+        }
+    </style>
+</head>
+<body>
+
+    <button class="model">
+        bow bow
+    </button>
+
+    <div class="fallback hello">
+        hello
+    </div>
+
+    <div class="scope-demo">
+
+        <h2>Inheritance & Scope</h2>
+
+        <p class="inner">
+            I inherit --body-color and --global-color.
+        </p>
+
+        <div class="local">
+            I define --local-color here.
+
+            <p class="inside-local">
+                I inherit --local-color from my parent.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
