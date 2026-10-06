@@ -23,6 +23,32 @@
             margin-bottom: 20px;
         }
 
+        /* minmax() */
+        #minmax-example {
+            display: grid;
+
+            grid-template-columns: repeat(3, minmax(100px, 1fr));
+            /* Creates 3 columns.
+            Each column has:
+            - Minimum width: 100px
+            - Maximum width: 1fr (equal share of available space) */
+
+            gap: 10px;
+
+            width: 600px;
+            padding: 10px;
+
+            background: lightblue;
+            margin-bottom: 20px;
+        }
+
+        #minmax-example div {
+            background: steelblue;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
         /* min() */
         #min-example {
             width: min(80%, 500px);
@@ -145,6 +171,16 @@
     <div id="min-example">min()</div>
 
     <div id="max-example">max()</div>
+
+    <div id="minmax-example">
+
+        <div>1</div>
+
+        <div>2</div>
+
+        <div>3</div>
+
+    </div>
 
     <div id="calc-example">calc()</div>
 

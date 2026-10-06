@@ -1,0 +1,44 @@
+.grid-container {
+  resize: both; /* Allows the user to resize the element horizontally AND vertically */
+  
+  overflow: auto; /* Adds scrollbars only when content overflows the container */
+  
+  display: grid; /* Makes this element a CSS Grid container */
+  
+  gap: 4px; /* Adds 4px of space between grid rows and columns */
+  
+  padding: 4px; /* Adds 4px of space inside the container, between its content and border */
+  
+  border: 1px solid grey; /* Adds a 1px solid grey border around the container */
+  
+  background-color: skyblue; /* Sets the background color to sky blue */
+  
+  grid-template-rows: 150px 150px; /* Creates 2 rows, each 150px tall */
+  
+  grid-template-columns: repeat(5,150px); /* Creates 5 columns, each 150px wide */
+}
+
+
+.grid-item {
+  background-color: #444; /* Sets the background color of each grid item to dark gray */
+  
+  text-align: center; /* Horizontally centers the text */
+  
+  color: #ddd; /* Sets the text color to light gray */
+  
+  font-family: sans-serif; /* Uses a sans-serif font */
+  
+  font-size: 1.5rem; /* Sets font size to 1.5 × the root HTML font size (usually 24px) */
+  
+  padding: 12px; /* Adds 12px of space inside each grid item around its content */
+}
+
+
+p {
+  margin: 12px auto 24px; /* top: 12px, right/left: auto, bottom: 24px */
+}
+
+
+img {
+  height: 60px; /* Sets every image to 60px tall; width is automatically adjusted to preserve aspect ratio */
+}
