@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Forms</title>
+</head>
+<body>
+    <form id="form" action="example.com/path" method="post">
+        <legend>Tomato</legend>
+        <div>
+            <label for="first_name">First Name:</label>
+            <input type="text" id="first_name" placeholder="tomato..." name="first_name">
+        </div>
+        <!-- 
+        <input type="text">
+        <input type="password">
+        <input type="email">
+        <input type="number">
+        <input type="date">
+        <input type="file">
+        <input type="checkbox">
+        <input type="radio">
+        <input type="submit"> 
+        -->
+        <div>
+            <label for="user_email">Email Address:</label>
+            <input type="email" id="user_email" name="email" placeholder="you@example.com">
+        </div>
+        <div>
+            <label for="user_password">Password:</label>
+            <input type="password" id="user_password" name="password">
+        </div>
+        <div>
+            <label for="amount">Amount:</label>
+            <input type="number" id="amount" name="amount">
+        </div>
+        <div>
+            <textarea>Some initial content</textarea>
+        </div>
+        <div>
+            <textarea rows="20" cols="60"></textarea>
+        </div>
+        <div>
+            <select name="fashion">
+            <optgroup label="Clothing">
+                <option value="t_shirt" selected>T-Shirts</option>
+                <option value="sweater">Sweaters</option>
+                <option value="coats">Coats</option>
+            </optgroup>
+            <optgroup label="Foot Wear">
+                <option value="sneakers">Sneakers</option>
+                <option value="boots">Boots</option>
+                <option value="sandals">Sandals</option>
+            </optgroup>
+            </select>
+        </div>
+        <div>
+            <h1>Ticket Type</h1>
+            <div>
+            <input type="radio" id="child" name="ticket_type" value="child">
+            <label for="child">Child</label>
+            </div>
+    
+            <div>
+            <input type="radio" id="adult" name="ticket_type" value="adult" checked>
+            <label for="adult">Adult</label>
+            </div>
+    
+            <div>
+            <input type="radio" id="senior" name="ticket_type" value="senior">
+            <label for="senior">Senior</label>
+            </div>
+        </div>
+        <div>
+            <h1>Pizza Toppings</h1>
+
+            <div>
+            <input type="checkbox" id="sausage" name="topping" value="sausage">
+            <label for="sausage">Sausage</label>
+            </div>
+
+            <div>
+            <input type="checkbox" id="onions" name="topping" value="onions">
+            <label for="onions">Onions</label>
+            </div>
+
+            <div>
+            <input type="checkbox" id="pepperoni" name="topping" value="pepperoni">
+            <label for="pepperoni">Pepperoni</label>
+            </div>
+
+            <div>
+            <input type="checkbox" id="mushrooms" name="topping" value="mushrooms" checked>
+            <label for="mushrooms">Mushrooms</label>
+            </div>
+        </div>
+        <div>
+            <button type="number">Submit</button>
+        </div>
+        <div>
+            <button type="reset">Reset</button>
+        </div>
+    </form>
+</body>
+</html>

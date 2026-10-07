@@ -1,0 +1,16 @@
+body {
+    margin: 0;
+}
+#main{
+    display:flex;
+    flex-direction: row;
+}
+#dashboard{
+    background-color:blue ;
+    width:100px;
+    color:white;
+}
+#main-content{
+    background-color:aqua;
+    width:calc(100vw - 100px);
+}
