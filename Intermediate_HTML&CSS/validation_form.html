@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* Normal styling */
+    form {
+      width: 300px;
+      margin: 50px auto;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    input {
+      padding: 8px;
+      border: 2px solid gray;
+      border-radius: 5px;
+    }
+
+    /* When the user enters a VALID value */
+    input:user-valid {
+      border-color: green;
+      background-color: #eaffea;
+    }
+
+    /* When the user enters an INVALID value */
+    input:user-invalid {
+      border-color: red;
+      background-color: #ffeaea;
+    }
+
+    button {
+      padding: 8px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <form>
+
+    <!-- minlength + maxlength -->
+    <label for="username">Username:</label>
+    <input
+      type="text"
+      id="username"
+      name="username"
+      minlength="3"
+      maxlength="10"
+      required
+      placeholder="3–10 characters"
+    >
+
+    <!-- min + max for number -->
+    <label for="age">Age:</label>
+    <input
+      type="number"
+      id="age"
+      name="age"
+      min="18"
+      max="60"
+      required
+      placeholder="18–60"
+    >
+
+    <!-- pattern -->
+    <label for="phone">Phone:</label>
+    <input
+      type="text"
+      id="phone"
+      name="phone"
+      pattern="[0-9]{10}"
+      required
+      placeholder="10-digit number"
+    >
+
+    <!-- min + max + step for number -->
+    <label for="marks">Marks:</label>
+    <input
+      type="number"
+      id="marks"
+      name="marks"
+      min="0"
+      max="100"
+      required
+      placeholder="0–100"
+    >
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>
