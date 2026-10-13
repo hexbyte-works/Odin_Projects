@@ -1,2 +1,9 @@
 *.woff
 *.woff2
+# Node.js dependencies
+
+node_modules/
+
+# Webpack build output
+
+dist/
